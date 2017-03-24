@@ -15,7 +15,7 @@ use JoliTypo\StateBag;
 
 /**
  * NO_BREAK_SPACE before :
- * NO_BREAK_THIN_SPACE before ; : ! ?
+ * NO_BREAK_THIN_SPACE before ; ! ?
  * NO_BREAK_SPACE inside « ».
  *
  * As recommended by "Abrégé du code typographique à l'usage de la presse", ISBN: 978-2351130667
