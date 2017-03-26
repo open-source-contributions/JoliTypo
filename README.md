@@ -118,6 +118,11 @@ NoSpaceBeforeComma
 
 Remove space before `,` and make sure there is only one space after.
 
+OneSpaceBetweenSentences
+------------------------
+
+Remove exceeded spaces between sentences.
+
 Hyphen (automatic hyphenation)
 ------------------------------
 

@@ -21,7 +21,7 @@ class OneSpaceBetweenSentences implements FixerInterface
     public function fix($content, StateBag $stateBag = null)
     {
         // Support a wide range of currencies
-        $content = preg_replace('(.)['.Fixer::ALL_SPACES.']*@mu', '$1' . ' ', $content);
+        $content = preg_replace('@(.)['.Fixer::ALL_SPACES.']+@mu', '$1'.' ', $content);
 
         return $content;
     }
