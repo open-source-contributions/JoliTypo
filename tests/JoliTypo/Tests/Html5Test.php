@@ -11,7 +11,7 @@ namespace JoliTypo\Tests;
 
 use JoliTypo\Fixer;
 
-class Html5Test extends \PHPUnit_Framework_TestCase
+class Html5Test extends \PHPUnit\Framework\TestCase
 {
     public function testHtml5Markup()
     {

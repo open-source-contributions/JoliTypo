@@ -11,7 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-class CurlyQuoteTest extends \PHPUnit_Framework_TestCase
+class CurlyQuoteTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleString()
     {

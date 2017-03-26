@@ -11,7 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-class HyphenTest extends \PHPUnit_Framework_TestCase
+class HyphenTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleString()
     {

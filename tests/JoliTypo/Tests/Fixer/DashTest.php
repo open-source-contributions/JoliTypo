@@ -11,7 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-class DashTest extends \PHPUnit_Framework_TestCase
+class DashTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleString()
     {

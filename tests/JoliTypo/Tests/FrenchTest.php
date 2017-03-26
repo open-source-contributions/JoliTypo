@@ -11,7 +11,7 @@ namespace JoliTypo\Tests;
 
 use JoliTypo\Fixer;
 
-class FrenchTest extends \PHPUnit_Framework_TestCase
+class FrenchTest extends \PHPUnit\Framework\TestCase
 {
     private $fr_fixers = array('Numeric', 'Ellipsis', 'Dimension', 'Dash', 'SmartQuotes', 'FrenchNoBreakSpace', 'CurlyQuote', 'Hyphen', 'Trademark');
 

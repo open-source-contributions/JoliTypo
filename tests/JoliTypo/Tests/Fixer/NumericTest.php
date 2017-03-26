@@ -11,7 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-class NumericTest extends \PHPUnit_Framework_TestCase
+class NumericTest extends \PHPUnit\Framework\TestCase
 {
     public function testNumericUnits()
     {

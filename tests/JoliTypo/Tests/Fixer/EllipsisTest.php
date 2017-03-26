@@ -11,7 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-class EllipsisTest extends \PHPUnit_Framework_TestCase
+class EllipsisTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleString()
     {

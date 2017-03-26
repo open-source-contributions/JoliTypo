@@ -11,9 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-/**
- */
-class NoSpaceBeforeCommaTest extends \PHPUnit_Framework_TestCase
+class NoSpaceBeforeCommaTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleString()
     {

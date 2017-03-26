@@ -13,7 +13,7 @@ use JoliTypo\Fixer;
 use JoliTypo\FixerInterface;
 use JoliTypo\StateBag;
 
-class JoliTypoTest extends \PHPUnit_Framework_TestCase
+class JoliTypoTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleInstance()
     {

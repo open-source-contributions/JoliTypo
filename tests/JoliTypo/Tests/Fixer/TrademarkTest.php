@@ -11,7 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-class TrademarkTest extends \PHPUnit_Framework_TestCase
+class TrademarkTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleString()
     {

@@ -11,7 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-class GermanQuotesTest extends \PHPUnit_Framework_TestCase
+class GermanQuotesTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleString()
     {

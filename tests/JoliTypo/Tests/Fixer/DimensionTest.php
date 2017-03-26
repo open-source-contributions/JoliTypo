@@ -11,7 +11,7 @@ namespace JoliTypo\Tests\Fixer;
 
 use JoliTypo\Fixer;
 
-class DimensionTest extends \PHPUnit_Framework_TestCase
+class DimensionTest extends \PHPUnit\Framework\TestCase
 {
     public function testSimpleString()
     {
