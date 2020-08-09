@@ -8,7 +8,7 @@ JoliTypo is a tool fixing [Microtypography](https://en.wikipedia.org/wiki/Microt
 ```php
 use JoliTypo\Fixer;
 
-$fixer = new Fixer(array('Ellipsis', 'Dash', 'SmartQuotes', 'CurlyQuote', 'Hyphen'));
+$fixer = new Fixer(['Ellipsis', 'Dash', 'SmartQuotes', 'CurlyQuote', 'Hyphen']);
 $fixedContent = $fixer->fix('<p>"Tell me Mr. Anderson... what good is a phone call... if you\'re unable to speak?" -- Agent Smith, <em>Matrix</em>.</p>');
 ```
 ```html
@@ -35,7 +35,7 @@ Just tell the Fixer class [which Fixer](#available-fixers) you want to run on yo
 ```php
 use JoliTypo\Fixer;
 
-$fixer = new Fixer(array("SmartQuotes", "FrenchNoBreakSpace"));
+$fixer = new Fixer(["SmartQuotes", "FrenchNoBreakSpace"]);
 $fixer->setLocale('fr_FR');
 $fixedContent = $fixer->fix('<p>Je suis "très content" de t\'avoir invité sur <a href="http://jolicode.com/">Jolicode.com</a> !</p>');
 ```
@@ -51,7 +51,7 @@ To fix non HTML content, use the `fixString()` method:
 ```php
 use JoliTypo\Fixer;
 
-$fixer = new Fixer(array("Trademark", "SmartQuotes"));
+$fixer = new Fixer(["Trademark", "SmartQuotes"]);
 $fixedContent = $fixer->fixString('Here is a "protip(c)"!'); // Here is a “protip©”!
 ```
 
@@ -157,7 +157,7 @@ en_GB
 -----
 
 ```php
-$fixer = new Fixer(array('Ellipsis', 'Dimension', 'Unit', 'Dash', 'SmartQuotes', 'NoSpaceBeforeComma', 'CurlyQuote', 'Hyphen', 'Trademark'));
+$fixer = new Fixer(['Ellipsis', 'Dimension', 'Unit', 'Dash', 'SmartQuotes', 'NoSpaceBeforeComma', 'CurlyQuote', 'Hyphen', 'Trademark']);
 $fixer->setLocale('en_GB');
 ```
 
@@ -167,7 +167,7 @@ fr_FR
 Those rules apply most of the recommendations of "Abrégé du code typographique à l'usage de la presse", ISBN: 9782351130667.
 
 ```php
-$fixer = new Fixer(array('Ellipsis', 'Dimension', 'Unit', 'Dash', 'SmartQuotes', 'FrenchNoBreakSpace', 'NoSpaceBeforeComma', 'CurlyQuote', 'Hyphen', 'Trademark'));
+$fixer = new Fixer(['Ellipsis', 'Dimension', 'Unit', 'Dash', 'SmartQuotes', 'FrenchNoBreakSpace', 'NoSpaceBeforeComma', 'CurlyQuote', 'Hyphen', 'Trademark']);
 $fixer->setLocale('fr_FR');
 ```
 
@@ -177,7 +177,7 @@ fr_CA
 Mostly the same as fr_FR, but the space before punctuation points is not mandatory.
 
 ```php
-$fixer = new Fixer(array('Ellipsis', 'Dimension', 'Unit', 'Dash', 'SmartQuotes', 'NoSpaceBeforeComma', 'CurlyQuote', 'Hyphen', 'Trademark'));
+$fixer = new Fixer(['Ellipsis', 'Dimension', 'Unit', 'Dash', 'SmartQuotes', 'NoSpaceBeforeComma', 'CurlyQuote', 'Hyphen', 'Trademark']);
 $fixer->setLocale('fr_CA');
 ```
 
@@ -187,7 +187,7 @@ de_DE
 Mostly the same as en_GB, according to [Typefacts](http://typefacts.com/) and [Wikipedia](http://de.wikipedia.org/wiki/Typografie_f%C3%BCr_digitale_Texte).
 
 ```php
-$fixer = new Fixer(array('Ellipsis', 'Dimension', 'Unit', 'Dash', 'SmartQuotes', 'NoSpaceBeforeComma', 'CurlyQuote', 'Hyphen', 'Trademark'));
+$fixer = new Fixer(['Ellipsis', 'Dimension', 'Unit', 'Dash', 'SmartQuotes', 'NoSpaceBeforeComma', 'CurlyQuote', 'Hyphen', 'Trademark']);
 $fixer->setLocale('de_DE');
 ```
 
@@ -201,13 +201,13 @@ Default usage
 -------------
 
 ```php
-$fixer          = new Fixer(array('Ellipsis', 'Dimension', 'Dash', 'SmartQuotes', 'CurlyQuote', 'Hyphen'));
+$fixer          = new Fixer(['Ellipsis', 'Dimension', 'Dash', 'SmartQuotes', 'CurlyQuote', 'Hyphen']);
 $fixedContent  = $fixer->fix("<p>Some user contributed HTML which does not use proper glyphs.</p>");
 
-$fixer->setRules(array('CurlyQuote'));
+$fixer->setRules(['CurlyQuote']);
 $fixedContent = $fixer->fix("<p>I'm only replacing single quotes.</p>");
 
-$fixer->setRules(array('Hyphen'));
+$fixer->setRules(['Hyphen']);
 $fixer->setLocale('en_GB'); // I tell which locale to use for Hyphenation and SmartQuotes
 $fixedContent = $fixer->fix("<p>Very long words like Antidisestablishmentarianism.</p>");
 ```
@@ -220,11 +220,11 @@ Then just give JoliTypo their fully qualified name, or even instance:
 
 ```php
 // by FQN
-$fixer          = new Fixer(array('Ellipsis', 'Acme\\YourOwn\\TypoFixer'));
+$fixer          = new Fixer(['Ellipsis', 'Acme\\YourOwn\\TypoFixer']);
 $fixedContent  = $fixer->fix("<p>Content fixed by the 2 fixers.</p>");
 
 // or instances, or both
-$fixer          = new Fixer(array('Ellipsis', 'Acme\\YourOwn\\TypoFixer', new Acme\\YourOwn\\PonyFixer("Some parameter")));
+$fixer          = new Fixer(['Ellipsis', 'Acme\\YourOwn\\TypoFixer', new Acme\\YourOwn\\PonyFixer("Some parameter")]);
 $fixedContent  = $fixer->fix("<p>Content fixed by the 3 fixers.</p>");
 ```
 
@@ -234,8 +234,8 @@ Configure the protected tags
 Protected tags is a list of HTML tag name that the DOM parser must avoid. Nothing in those tags will be fixed.
 
 ```php
-$fixer          = new Fixer(array('Ellipsis'));
-$fixer->setProtectedTags(array('pre', 'a'));
+$fixer          = new Fixer(['Ellipsis']);
+$fixer->setProtectedTags(['pre', 'a']);
 $fixedContent  = $fixer->fix("<p>Fixed...</p> <pre>Not fixed...</pre> <p>Fixed... <a>Not Fixed...</a>.</p>");
 ```
 
